@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #1e90ff;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 70%;
+}
+
+input[type="submit"] {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 50%;
+}
+
+input[type="submit"]:hover {
+    background-color: #104e8b;
+}
+
+.trip-card {
+    background-color: #e6f7ff;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #104e8b;
+}

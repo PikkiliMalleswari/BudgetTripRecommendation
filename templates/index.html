@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget Trip Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌴 Budget Trip Recommendation System</h1>
+        <p>Enter your budget and preferred trip type to discover your perfect destination!</p>
+        <form action="/recommend" method="post">
+            <input type="number" name="budget" placeholder="Enter your budget (₹)" required>
+            <select name="trip_type" required>
+                <option value="">Choose trip type</option>
+                <option value="beach">Beach 🌊</option>
+                <option value="adventure">Adventure 🏔️</option>
+                <option value="nature">Nature 🌿</option>
+                <option value="culture">Culture 🏛️</option>
+            </select>
+            <br>
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+</body>
+</html>

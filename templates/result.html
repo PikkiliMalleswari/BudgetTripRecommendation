@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trip Recommendations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏖️ Recommended Trips</h1>
+        {% if recommendations %}
+            {% for trip in recommendations %}
+            <div class="trip-card">
+                <h3>{{ trip.Destination }} 
+                    {% if trip.Type.lower() == 'beach' %}🌊
+                    {% elif trip.Type.lower() == 'adventure' %}🏔️
+                    {% elif trip.Type.lower() == 'nature' %}🌿
+                    {% else %}🏛️
+                    {% endif %}
+                </h3>
+                <p><strong>State:</strong> {{ trip.State }}</p>
+                <p><strong>Type:</strong> {{ trip.Type }}</p>
+                <p><strong>Cost:</strong> ₹{{ trip.Average_Cost }}</p>
+                <p><strong>Duration:</strong> {{ trip.Duration }} days</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No trips match your criteria.</p>
+        {% endif %}
+        <br>
+        <a href="/">🔙 Go Back</a>
+    </div>
+</body>
+</html>
